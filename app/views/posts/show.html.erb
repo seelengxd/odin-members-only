@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @post.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @post.body %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <% if user_signed_in? %>
+  <%= @post.user.username %>
+  <% else %>
+  SIGN IN FIRST
+  <% end %>
+</p>
+
+<%= link_to 'Back', posts_path %>
